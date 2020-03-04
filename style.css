@@ -1,78 +1,65 @@
-body, html{
-height:100% ;
+body,html{
+    height: 100%;
 }
 body{
-    height: 100%;
-    width: 100%;
-
-}
-.menu-border{
-    background-color: rgb(204, 128, 5);
-    width: 100%;
-    height:70px;
-    float:left;
-    position: fixed;
-}
-ul {
-    list-style:none;
-    float:left;
-    width: 100%;
-    background-color: rgb(204, 128, 5);
-    height:70px;
-}
-ul li {
-    margin:auto;
-    padding: 0;
-    float:left;
-    position:relative;
-    width:150px;
-    height:50px;
-    text-align: center;
-    padding-top:25px;
-    font-size:22px;
-    background-color: rgb(250, 185, 79);
+    background-color: rgb(128, 207, 226);
 }
 
-ul li a {
-    padding:5;
-    color:green;
-    text-decoration:none;
-}
-ul li a:hover {
-    color:rgb(13, 58, 13);
-    cursor: default;
+
+.main-background{
+width: 80%;
+margin-left:10%;
+background-color: antiquewhite;
+height: 100%;
 }
 
-ul li:hover a {
-    color:rgb(13, 58, 13);
-    cursor: default;
+.main-menu-board{
+width: 100%;
+height:10%;
+display:inline-block;
+background-color: rgb(207, 107, 14);
+position: absolute;
 }
-ul li:hover ul a {
-    color:green;
-}
-ul li ul li:hover a{
-    color:rgb(13, 58, 13);
-    cursor: default;
-}
-ul li ul{
-    display:none;
-    position:absolute;
-    padding:0;
-    left:0;
-    top:60px;
-    width: 200px;
-    text-align:center;
-}
-ul li:hover ul{
-    display:block;
-    z-index:1;
-    background-color:  rgb(250, 185, 79);
-}
-.main_backround{
-    height: 3000px;
-    position:relative;
-    background-color: aqua;
-    margin: auto;
-    margin-top:70px;
+.main-menu-board-hidden{
     width: 80%;
+    z-index: 999;
+    position: absolute;
+    float:left;
+}
+.menu-button{
+background-color: rgb(195, 235, 51);
+display: inline-block;
+width:150px;
+height:50px;
+text-align: center;
+padding-top: 25px;
+}
+
+.menu-drop-list{
+display:none;
+position: absolute;
+
+}
+
+.menu-option{
+background-color: crimson;
+display: block;
+width:150px;
+height:50px;
+text-align: center;
+padding-top: 25px;
+
+}
+
+.menu-button:hover .menu-drop-list{
+display: block;
+top:100%;
+}
+.menu-drop-list{
+    display: none
+}
+
+.menu-option:hover{
+    border:black 3px solid;
+    width:170px;
 }
