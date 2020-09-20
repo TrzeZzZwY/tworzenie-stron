@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+    <script>
+        function mouseButtonDown(x){
+            document.getElementById('1').style.
+            document.getElementById('1').innerHTML=x;
+        }
+        function mouseButtonUp(x){
+            document.getElementById('1').style.
+            document.getElementById('1').innerHTML=x;
+        }
+        window.addEventListener('DOMContentLoaded', (event) => {
+        console.log('DOM fully loaded and parsed');
+        document.getElementById('logo1').style.display="block"
+        window.scroll(0,-9999)
+        document.getElementById('carousel1').style.display="block"
+        }); 
+        function zmianaKol(licz){
+            if(licz==7){
+                licz=1
+            }
+            document.getElementById('logo'+licz).style.display="none"
+            licz++
+            if(licz==6){
+                licz=1
+            }
+            document.getElementById('logo'+licz).style.display="block"
+            
+        }
+        timeLeft = 10;
+        obraz = 1;
+        popobraz = 9
+        nastobraz = 2
+        function countdown() {
+	       // timeLeft--;
+            if(nastobraz == 10){
+                nastobraz = 1
+            }
+            if(obraz == 10){
+                obraz = 1
+            }
+            if(popobraz == 10){
+                popobraz = 1
+            }
+            console.log("pętla= " +timeLeft);
+            console.log('obraz= '+obraz);
+            console.log('popobraz= '+popobraz);
+            console.log('nastobraz= '+nastobraz);
+            document.getElementById('carousel'+popobraz).style.display="none"
+	        document.getElementById("carousel"+obraz).style.animation="slide-out-left 1.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
+            document.getElementById('carousel'+nastobraz).style.display="block"
+            document.getElementById('carousel'+nastobraz).style.animation="slide-in-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+	        if (timeLeft > 0) {
+		        setTimeout(countdown, 5000);
+    	    }
+            obraz++
+            nastobraz++
+            popobraz++
+        };
+
+        setTimeout(countdown, 3000);
+
+        </script>
+</head>
+<body>
+    <nav>
+        <div class = "logo">
+            <img id="logo1" src="logo/logo1.png" alt="logo" class = "logo_img" onclick="zmianaKol(1)">  
+            <img id="logo2" src="logo/logo2.png" alt="logo" class = "logo_img" onclick="zmianaKol(2)">  
+            <img id="logo3" src="logo/logo3.png" alt="logo" class = "logo_img" onclick="zmianaKol(3)">  
+            <img id="logo4" src="logo/logo4.png" alt="logo" class = "logo_img" onclick="zmianaKol(4)">  
+            <img id="logo5" src="logo/logo5.png" alt="logo" class = "logo_img" onclick="zmianaKol(5)">  
+            <img id="logo6" src="logo/logo6.png" alt="logo" class = "logo_img" onclick="zmianaKol(6)">  
+
+        </div>
+    <div class = "menu">
+        <div id="1" class = "menu_button" onmousedown="mouseButtonDown('aaaa')" onmouseup="mouseButtonUp('HOME')">HOME</div>
+        <div class = "menu_button">GAMES</div>
+        <div class = "menu_button">CONTACT</div>
+    </div>
+    </nav>
+    <section>
+       <div id="container">
+           <div>
+                <img id="carousel1" src="gallery/piotro.jpg" alt="aaa" class="gallery">
+                <img id="carousel2" src="gallery/pedal.jpg" alt="aaa" class="gallery" >
+                <img id="carousel3" src="gallery/marcin.jpg" alt="aaa" class="gallery" >
+                <img id="carousel4" src="gallery/kuba.jpg" alt="aaa" class="gallery" >
+                <img id="carousel5" src="gallery/jasiek.jpg" alt="aaa" class="gallery" >
+                <img id="carousel6" src="gallery/daniel.jpg" alt="aaa" class="gallery" >
+                <img id="carousel7" src="gallery/cyrnik.jpg" alt="aaa" class="gallery" >
+                <img id="carousel8" src="gallery/bator.jpg" alt="aaa" class="gallery" >
+                <img id="carousel9" src="gallery/adam.jpg" alt="aaa" class="gallery" >
+           </div>
+        </div>
+    </section>
+    <section class ="glowny">
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptates ab unde repudiandae? Excepturi blanditiis nemo, dicta laudantium, hic ut qui voluptas sint iure facilis facere quisquam ipsa voluptatem pariatur!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, at, dolores atque ex earum ducimus tenetur, reprehenderit accusamus commodi odit non vel repudiandae ab minus quod officiis? Itaque, qui eaque?
+        </article>
+        <a class="przycisk"  href="#lorem">Learn More</a>
+    </section>
+    <div class ="obrazek">
+    </div>
+    <section class ="glowny">
+        <article id="lorem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, delectus provident. Sapiente, eius cum eaque temporibus assumenda distinctio provident? Reprehenderit totam dolorem eum voluptate labore veritatis omnis fuga eaque recusandae.
+        </article>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

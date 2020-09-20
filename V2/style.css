@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+    background: linear-gradient(to left,#e2e2e2, #cfcfcd);
+    height:100%;
+    font-family: 'Roboto';
+    font-size:20px;
+    padding:0px;
+    margin: 0px;
+    overflow: hidden;
+}
+html {
+scroll-behavior: smooth;
+}
+html, body{
+    height: 100%;
+}
+.gallery_container{
+    width: 100%;
+    height: 600px;
+    background-color: aqua;
+}
+.main_gallery{
+    width: 100%;
+    height: 450px;
+    background-color: brown;
+}
+.gallery{
+    width: 800px;
+    height: 450px;
+    background-color: darkblue;
+    display: none;
+    position: absolute;
+    margin-left: 30%;
+}
+.gallery_buttons_container{
+    width: 100%;
+    height: 150px;
+    background-color: darkorchid;
+}
+.gallery_buttons {
+    display:block;
+    list-style: none;
+    background-color: deepskyblue;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+.gallery_buttons li{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.upper_text{
+    width: 100%;
+    height: 200px;
+}
+.upper_text h2{
+    text-align: center;
+}
+.upper_button_container{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 400px;
+}
+.upper_button{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(206, 70, 70);
+    border-radius:8px;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+
+}
+.transition{
+    width: 100%;
+    height: 700px;
+    background-color: rgb(14, 14, 14);
+    background-attachment: fixed;
+}
+
+
+.main_body{
+    width: 100%;
+    height: 1920px;
+    background-color: goldenrod;
+}
+
+
+
+
+@keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+  }
